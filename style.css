@@ -1,12 +1,10 @@
 /* font */
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Ubuntu:wght@400;700&display=swap');
 
 #money-logo{
     width: 50px;
     height: 35px;
     margin-top: -10px;
-
-    
 }
 /* header title */
 .title{
@@ -17,8 +15,9 @@
 /* form titles */
 .form-titles{
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
+    font-family: 'Poppins', sans-serif;
 }
 /* form inputes */
 input{
