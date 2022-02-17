@@ -1,8 +1,8 @@
-/* income-input
+/*---All id's--->
+income-input
 food-input
 rent-input
 cloth-input
-
 total-exp
 balance
 save-input
@@ -11,40 +11,58 @@ calc-btn
 saving-amount
 remaining-balance */
 
-function calcInput() {
-    const incomeInput = document.getElementById('income-input').value;
+
+//
+function calculation() {
+    let incomeInput = document.getElementById('income-input').value;
     const foodInput = document.getElementById('food-input').value;
     const rentInput = document.getElementById('rent-input').value;
     const clothInput = document.getElementById('cloth-input').value;
     let totalExpenses = document.getElementById('total-exp');
     let balance = document.getElementById('balance');
-    total = parseFloat(foodInput) + parseFloat(rentInput) + parseFloat(clothInput) ;
-    totalExpenses.innerText = total;
-    remaining = parseFloat(incomeInput) - total;
-    balance.innerText = remaining;
+    var total = parseFloat(foodInput) + parseFloat(rentInput) + parseFloat(clothInput) ;
+
+    //error handling
+    if (total > incomeInput.value){
+        alert('You cant spend more than your income')
+    }
+    else if (incomeInput > 0 && foodInput >  0 && rentInput > 0 && clothInput > 0){
+        totalExpenses.innerText = total;
+        remaining = parseFloat(incomeInput) - total;
+        balance.innerText = remaining;
+    }
+    else{
+        alert('Please put a valid number')
+    }
 }
 
 document.getElementById('calc-btn').addEventListener('click', function () {
-    calcInput();
+    calculation();
 });
 
 
 // calculate save money part
-function saveMoney() {
+function saveCalculation() {
     const incomeInput = document.getElementById('income-input');
-    let incomeInputValue = incomeInput.value;
+    let incomeInput_2 = incomeInput.value;
     let balance = document.getElementById('balance').innerText;
-    let remainingBalanceNumber = document.getElementById('remaining-balance');
-    const saveMoneyInput = document.getElementById('save-input').value;
+    let remainingBalance = document.getElementById('remaining-balance');
+    const saveInput = document.getElementById('save-input').value;
     const savingAmount = document.getElementById('saving-amount');
-    let savesMoney = (incomeInputValue * saveMoneyInput) / 100;
-    remainingBalance = parseFloat(balance) - savesMoney;
-    savingAmount.innerText = savesMoney;
-    remainingBalanceNumber.innerText =  remainingBalance;
+    if (saveInput > 0){
+        let savesMoney = (incomeInput_2 * saveInput) / 100;
+        newRemainingBalance = parseFloat(balance) - savesMoney;
+        savingAmount.innerText = savesMoney;
+        remainingBalance.innerText =  newRemainingBalance;
+    }
+    else{
+        alert('Please put a valid number')
+    }
+    
 }
 
 document.getElementById('save-btn').addEventListener('click',function(){
-    saveMoney();
+    saveCalculation();
 })
 
 // get calculate button 

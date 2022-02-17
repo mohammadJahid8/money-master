@@ -1,3 +1,8 @@
+#money-logo{
+    width: 50px;
+    height: 30px;
+    /* padding: 5px; */
+}
 /* header title */
 .title{
     color: #31A5AC;
@@ -30,7 +35,6 @@ input{
     border-radius: 4px;
     font-weight: 700;
 }
-
 #form-body{
     background-color: #F8F8F8;
     padding-left: 50px;
@@ -40,6 +44,7 @@ input{
     justify-content: center;
 }
 
+/* media query for responsive */
 @media screen and (max-width: 768px) {
     img{
         width: 100%;
@@ -52,7 +57,6 @@ input{
         width: 100%;
         padding-left: 10%;
     }
-
     input{
         padding-left: 10%;
     }
