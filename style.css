@@ -1,12 +1,14 @@
+/* header title */
 .title{
     color: #31A5AC;
 }
+/* form titles */
 .form-titles{
     text-align: center;
     font-size: 24px;
     font-weight: 500;
 }
-
+/* form inputes */
 input{
     background-color: #DCDCDC;
     border: none;
@@ -33,7 +35,7 @@ input{
     background-color: #F8F8F8;
     padding-left: 50px;
 }
-.full-body{
+.img-form-parent{
     display: flex;
     justify-content: center;
 }
@@ -42,7 +44,7 @@ input{
     img{
         width: 100%;
     }
-    .full-body{
+    .img-form-parent{
         display: block;
         justify-content: center;
     }
