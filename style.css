@@ -19,7 +19,7 @@
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
 }
-/* form inputes */
+/* all input style part */
 input{
     background-color: #DCDCDC;
     border: none;
@@ -29,10 +29,12 @@ input{
 .save-input2{
     width: 30%;
 }
+
 #calc-btn{
    margin-left: 75px;
    margin-bottom: 30px;
 }
+/* button style part */
 .button{
     background-color:#59A5FF;
     border: none;
@@ -41,6 +43,8 @@ input{
     border-radius: 4px;
     font-weight: 700;
 }
+
+/* form body style */
 #form-body{
     background-color: #F8F8F8;
     padding-left: 50px;
@@ -50,6 +54,7 @@ input{
     justify-content: center;
 }
 
+/*=============== BREAKPOINTS ===============*/
 /* media query for responsive */
 @media screen and (max-width: 768px) {
     img{
