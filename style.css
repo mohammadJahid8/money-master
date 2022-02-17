@@ -7,10 +7,7 @@
     font-weight: 500;
     padding-right: 35px;
 }
-#form-body{
-    background-color: #F8F8F8;
-    padding-left: 50px;
-}
+
 input{
     background-color: #DCDCDC;
     border: none;
@@ -32,3 +29,53 @@ input{
     border-radius: 4px;
     font-weight: 700;
 }
+
+#form-body{
+    background-color: #F8F8F8;
+    padding-left: 50px;
+    
+}
+.full-body{
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    img{
+        width: 200%;
+    }
+    .full-body{
+        display: block;
+        justify-content: center;
+    }
+    #form-body{
+        width: 196%;
+        padding-left: 30%;
+    }
+    input{
+        padding-left: 50%;
+    }
+    .head-title{
+        padding-left: 32%;
+    }
+}
+@media screen and (min-width: 600px ) and (max-width: 800px){
+    img{
+        width: 200%;
+    }
+    .full-body{
+        display: block;
+        justify-content: center;
+    }
+    #form-body{
+        width: 198%;
+    }
+    input{
+        padding-left: 50%;
+    }
+    .head-title{
+        padding-left: 32%;
+    }
+}
+
+

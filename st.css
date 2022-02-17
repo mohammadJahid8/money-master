@@ -1,0 +1,56 @@
+/* header section style part */
+.header{
+    color: rgba(31, 132, 246, 0.8);
+}
+
+.icon-img{
+    width: 33px;
+    margin-bottom: 12px;
+}
+
+/* all input style part */
+input{
+    border: none;
+    background-color: #DCDCDC;
+    border-radius: 5px;
+    padding: .9rem 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* button style part */
+button{
+    border: none;
+    background-color: lightskyblue;
+    padding: .5rem 2.5rem;
+    border-radius: 5px;
+    color: #FFF;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 420px) {
+    input{
+        font-size: 1rem;
+    }
+
+    .save-btn{
+        margin-top: 12px;
+        margin-left: 5px;
+    }
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+    input{
+        font-size: 1.3rem;
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 992px) {
+    input{
+        font-size: 1.3rem;
+    }
+}
