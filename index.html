@@ -28,14 +28,14 @@
                 </div>
                 <!-- calculation form starts -->
                 <div id="form-body" class="col">
-                    <h1 class="form-titles mt-5 ">Income:</h1>
+                    <h1 class="form-titles mt-5 ">Income</h1>
 
                     <div class="mb-3 row">
                         <label for="inputPassword" class="col-sm-2 col-form-label list-group fw-bolder">Income:</label>
 
                         <div class="col-sm-10  ">
 
-                            <input type="text" id="save-money-input">
+                            <input type="text" id="income-input" placeholder="0">
                         </div>
 
                     </div>
@@ -46,35 +46,35 @@
                         <label for="inputPassword" class="col-sm-2 col-form-label fw-bolder">Food:</label>
                         <div class="col-sm-10 ">
 
-                            <input type="text" id="save-money-input">
+                            <input type="text" id="food-input" placeholder="0">
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="inputPassword" class="col-sm-2 col-form-label fw-bolder">Rent:</label>
                         <div class="col-sm-10 ">
 
-                            <input type="text" id="save-money-input">
+                            <input type="text" id="rent-input" placeholder="0">
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="inputPassword" class="col-sm-2 col-form-label list-group fw-bolder">Clothes:</label>
                         <div class="col-sm-10 ">
 
-                            <input type="text" id="save-money-input">
+                            <input type="text" id="cloth-input" placeholder="0">
                         </div>
                     </div>
 
-                    <button id="calc-btn" class="button" id="save-money">Calculate</button>
+                    <button id="calc-btn" class="button">Calculate</button>
 
-                    <h1 class="form-titles mt-4 mb-4">Total Expenses: <span>000</span></h1>
-                    <h1 class="form-titles mt-4 mb-4">Balance: <span>000</span> </h1>
+                    <h1 class="form-titles mt-4 mb-4">Total Expenses: <span id="total-exp">000</span></h1>
+                    <h1 class="form-titles mt-4 mb-4">Balance: <span id="balance">000</span></h1>
 
+                    <!-- savings section  -->
+                    <p class="fw-bolder">Save: <input id="save-input" class="save-input2" type="text" placeholder="0"> % <button class="button"
+                            id="save-btn">Save</button></p>
 
-                    <p class="fw-bolder">Save: <input class="save-input" type="text" id="save-money-input"> % <button
-                            class="button" id="save-money">Save</button></p>
-
-                    <h1 class="form-titles mt-4 mb-4">Saving Amount: <span>000</span></h1>
-                    <h1 class="form-titles mt-4 mb-4">Remaining Balance: <span>000</span> </h1>
+                    <h1 class="form-titles mt-4 mb-4">Saving Amount: <span id="saving-amount">000</span></h1>
+                    <h1 class="form-titles mt-4 mb-4">Remaining Balance: <span id="remaining-balance">000</span> </h1>
                 </div>
 
             </div>
