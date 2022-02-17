@@ -14,25 +14,29 @@ remaining-balance */
 
 //
 function calculation() {
-    let incomeInput = document.getElementById('income-input').value;
-    const foodInput = document.getElementById('food-input').value;
-    const rentInput = document.getElementById('rent-input').value;
-    const clothInput = document.getElementById('cloth-input').value;
+    const incomeInput = parseInt (document.getElementById('income-input').value);
+    const foodInput = parseInt (document.getElementById('food-input').value);
+    const rentInput = parseInt(document.getElementById('rent-input').value);
+    const clothInput =parseInt (document.getElementById('cloth-input').value);
     let totalExpenses = document.getElementById('total-exp');
     let balance = document.getElementById('balance');
-    var total = parseFloat(foodInput) + parseFloat(rentInput) + parseFloat(clothInput) ;
-
+    
     //error handling
-    if (total > incomeInput.value){
-        alert('You cant spend more than your income')
+    if (isNaN (incomeInput) || isNaN (foodInput)  || isNaN(rentInput) || isNaN(clothInput) || incomeInput < 0 || foodInput < 0 || rentInput < 0 || clothInput < 0){
+        alert('Please put a valid number')
     }
-    else if (incomeInput > 0 && foodInput >  0 && rentInput > 0 && clothInput > 0){
-        totalExpenses.innerText = total;
+   
+    else{
+        
+        var total = foodInput + rentInput +clothInput;
+        if (total > incomeInput){
+            alert('You cant spend more than your income')
+        }
+        else{
+            totalExpenses.innerText = total;
         remaining = parseFloat(incomeInput) - total;
         balance.innerText = remaining;
-    }
-    else{
-        alert('Please put a valid number')
+        }
     }
 }
 
@@ -49,11 +53,23 @@ function saveCalculation() {
     let remainingBalance = document.getElementById('remaining-balance');
     const saveInput = document.getElementById('save-input').value;
     const savingAmount = document.getElementById('saving-amount');
-    if (saveInput > 0){
-        let savesMoney = (incomeInput_2 * saveInput) / 100;
-        newRemainingBalance = parseFloat(balance) - savesMoney;
-        savingAmount.innerText = savesMoney;
-        remainingBalance.innerText =  newRemainingBalance;
+
+    //error handeling
+    if (saveInput > 0 && saveInput <= 100){
+        let amount = (incomeInput_2 * saveInput) / 100;
+        if (amount > parseInt(balance)){
+            alert('You cant save more than your balance');
+        }
+        
+        else{
+            let newRemainingBalance = parseInt(balance) - amount;
+            savingAmount.innerText = amount;
+            remainingBalance.innerText =  newRemainingBalance;
+        }
+    
+    }
+    else if (saveInput > 100 || saveInput< 0 ){
+        alert('You cant save more than your income')
     }
     else{
         alert('Please put a valid number')

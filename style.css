@@ -1,11 +1,18 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
 #money-logo{
     width: 50px;
-    height: 30px;
-    /* padding: 5px; */
+    height: 35px;
+    margin-top: -10px;
+
+    
 }
 /* header title */
 .title{
     color: #31A5AC;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
 }
 /* form titles */
 .form-titles{
@@ -55,7 +62,8 @@ input{
     }
     #form-body{
         width: 100%;
-        padding-left: 10%;
+        padding-left: 4%;
+        text-align: center;
     }
     input{
         padding-left: 10%;
