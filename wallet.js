@@ -20,7 +20,7 @@ function calculation() {
     let totalExpenses = document.getElementById('total-exp');
     let balance = document.getElementById('balance');
 
-    //error handling
+    //error handlingss
     if (isNaN(incomeInput) || isNaN(foodInput) || isNaN(rentInput) || isNaN(clothInput) || incomeInput < 0 || foodInput < 0 || rentInput < 0 || clothInput < 0) {
         alert('Please put a valid number')
     }
@@ -28,7 +28,7 @@ function calculation() {
         //calc of total expenses
         var total = foodInput + rentInput + clothInput;
         if (total > incomeInput) {
-            alert('You cant spend more than your income')
+            alert('You cant spend more than your incomes')
         }
         else {
             //calc of balance after expenses
